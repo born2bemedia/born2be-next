@@ -4,8 +4,6 @@ date: "2023-11-29T22:30:46"
 image: "/wp-content/uploads/2023/11/article-01.png"
 imageWidth: 2336
 imageHeight: 1302
-imageSrcSet: "/wp-content/uploads/2023/11/article-01.png 2336w, /wp-content/uploads/2023/11/article-01-300x167.png 300w, /wp-content/uploads/2023/11/article-01-1024x571.png 1024w, /wp-content/uploads/2023/11/article-01-768x428.png 768w, /wp-content/uploads/2023/11/article-01-1536x856.png 1536w, /wp-content/uploads/2023/11/article-01-2048x1141.png 2048w"
-imageSizes: "(max-width: 2336px) 100vw, 2336px"
 ---
 
 <p>When it comes to promoting the brand, reputation management, and further development strategy, any company faces the challenge of the abundance of data available on the internet.&nbsp;</p>

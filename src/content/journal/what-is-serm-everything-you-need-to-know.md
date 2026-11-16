@@ -4,8 +4,6 @@ date: "2023-11-29T23:04:39"
 image: "/wp-content/uploads/2023/11/article-03.png"
 imageWidth: 1752
 imageHeight: 977
-imageSrcSet: "/wp-content/uploads/2023/11/article-03.png 1752w, /wp-content/uploads/2023/11/article-03-300x167.png 300w, /wp-content/uploads/2023/11/article-03-1024x571.png 1024w, /wp-content/uploads/2023/11/article-03-768x428.png 768w, /wp-content/uploads/2023/11/article-03-1536x857.png 1536w"
-imageSizes: "(max-width: 1752px) 100vw, 1752px"
 ---
 
 <p>In today’s digital age, it’s more important than ever for businesses to have a solid online presence. With so many people turning to the internet to research products and services before purchasing, companies must ensure their online reputation is in good standing.&nbsp;</p>

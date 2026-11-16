@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import ContactsPageForm from '@/components/forms/ContactsPageForm';
 
 export default function ContactsPage() {
@@ -26,7 +26,7 @@ export default function ContactsPage() {
                   {"Reach us through the channels below and find in our face a trustworthy partner."}
                 </p>
                 {" "}
-                <img src="/wp-content/uploads/2023/11/contacts-img-01.png" alt="image" />
+                <Image src="/wp-content/uploads/2023/11/contacts-img-01.png" alt="image" width={1476} height={1095} loading="eager" fetchPriority="high" />
                 {" "}
               </div>
               {" "}
@@ -103,17 +103,17 @@ export default function ContactsPage() {
           {" "}
         </div>
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" className="float-ellipce-01" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" width={1601} height={1601} loading="eager" className="float-ellipce-01" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" className="float-ellipce-02" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" width={1401} height={1401} loading="eager" className="float-ellipce-02" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" className="float-ellipce-03" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" width={1801} height={1801} loading="eager" className="float-ellipce-03" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" className="float-ellipce-04" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" width={901} height={901} loading="eager" className="float-ellipce-04" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" className="float-ellipce-05" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" width={904} height={959} loading="eager" className="float-ellipce-05" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" className="float-ellipce-06" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" width={901} height={901} loading="eager" className="float-ellipce-06" unoptimized />
         {" "}
       </section>
       {" "}

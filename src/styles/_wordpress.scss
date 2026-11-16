@@ -1,5 +1,13 @@
 // Small bits of WordPress core/Underscores CSS the theme relied on.
 
+// next/image puts width/height attributes on every image. On WordPress the images had none,
+// so the theme CSS sizes them; keep that: the attributes only give the browser the aspect ratio.
+// Loaded before the theme, so any theme rule that sets a size still wins.
+img {
+  width: auto;
+  height: auto;
+}
+
 // "Skip to content" link: hidden until focused with the keyboard.
 .screen-reader-text {
   border: 0;

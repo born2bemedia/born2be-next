@@ -4,8 +4,6 @@ date: "2023-11-29T23:00:39"
 image: "/wp-content/uploads/2023/11/article-02.png"
 imageWidth: 1752
 imageHeight: 977
-imageSrcSet: "/wp-content/uploads/2023/11/article-02.png 1752w, /wp-content/uploads/2023/11/article-02-300x167.png 300w, /wp-content/uploads/2023/11/article-02-1024x571.png 1024w, /wp-content/uploads/2023/11/article-02-768x428.png 768w, /wp-content/uploads/2023/11/article-02-1536x857.png 1536w"
-imageSizes: "(max-width: 1752px) 100vw, 1752px"
 ---
 
 <p>Building a solid employer reputation is crucial for attracting and retaining top talent and creating a positive workplace culture. An employer’s reputation is determined by the experiences of current and former employees, as well as the external perception of the company.</p>

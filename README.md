@@ -26,7 +26,7 @@ npm run dev                  # http://localhost:3000
 | `src/content/journal/*.md` | Journal posts (frontmatter + HTML/Markdown body). Add a file = add a post |
 | `src/content/seo.json` | Titles/descriptions/OG per URL (migrated from Yoast) |
 | `src/styles/theme/` | Original theme SCSS, loaded globally in the same order as on WordPress |
-| `public/wp-content/uploads/` | Images, at the same paths as on WordPress (old image URLs keep working) |
+| `public/wp-content/uploads/` | Images, at the same paths as on WordPress (old image URLs keep working). Rendered with `next/image` (WebP, lazy loading); the blurred `ellipse-*.png` backgrounds are `unoptimized` because WebP makes them bigger |
 | `src/styles/_sliders.scss` | Swiper base styles, slide widths, CSS marquees ("Apply the power of four S", SERM/Cases logo strip) |
 
 ## Adding a journal post
@@ -38,6 +38,8 @@ Create `src/content/journal/<url-slug>.md`:
 title: "Post title"
 date: "2026-01-31T10:00:00"
 image: "/wp-content/uploads/2026/01/cover.png"
+imageWidth: 1752   # real size of the image file
+imageHeight: 977
 ---
 
 Text in **Markdown** or HTML.

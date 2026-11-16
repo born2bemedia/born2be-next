@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -556,35 +556,35 @@ export default function SmmPage() {
               <div className="smm-social__social">
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-01.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-01.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-02.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-02.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-03.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-03.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-04.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-04.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-05.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-05.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-06.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-06.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-07.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-07.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
                 <a href="#" className="social">
-                  <img src="/wp-content/uploads/2023/12/icon-social-08.svg" alt="" />
+                  <Image src="/wp-content/uploads/2023/12/icon-social-08.svg" alt="" width={140} height={140} />
                 </a>
                 {" "}
               </div>
@@ -790,7 +790,7 @@ export default function SmmPage() {
                     {" "}
                   </Link>
                   {" "}
-                  <img src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" className="img-float" />
+                  <Image src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" width={484} height={434} className="img-float" />
                   {" "}
                 </div>
                 {" "}
@@ -802,17 +802,17 @@ export default function SmmPage() {
           {" "}
         </div>
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" className="float-ellipce-01" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" width={1601} height={1601} className="float-ellipce-01" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" className="float-ellipce-02" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" width={1401} height={1401} className="float-ellipce-02" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" className="float-ellipce-03" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" width={1801} height={1801} className="float-ellipce-03" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" className="float-ellipce-04" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" width={901} height={901} className="float-ellipce-04" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" className="float-ellipce-05" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" width={904} height={959} className="float-ellipce-05" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" className="float-ellipce-06" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" width={901} height={901} className="float-ellipce-06" loading="eager" unoptimized />
         {" "}
       </section>
       {" "}

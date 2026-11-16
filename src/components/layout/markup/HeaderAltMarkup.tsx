@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HeaderAltMarkup() {
@@ -14,7 +14,7 @@ export default function HeaderAltMarkup() {
           <div className="header__col-01">
             {" "}
             <Link href="/" className="header__logo">
-              <img src="/wp-content/uploads/2023/11/b2b-logo-black.svg" alt="logo" />
+              <Image src="/wp-content/uploads/2023/11/b2b-logo-black.svg" alt="logo" width={208} height={26} loading="eager" />
             </Link>
             {" "}
           </div>

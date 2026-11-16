@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 // Same behaviour as the "Preloader Plus" plugin: shown on the first load, fades out 500 ms after
@@ -27,8 +28,8 @@ export default function Preloader() {
   return (
     <div className={`preloader-plus${state === 'fading' ? ' complete' : ''}`} aria-hidden="true">
       <div className="preloader-content">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="preloader-custom-img" src="/wp-content/uploads/2024/01/born2be-preloader.gif" alt="" />
+        {/* Animated GIF: served as is (unoptimized), loaded right away. */}
+        <Image className="preloader-custom-img" src="/wp-content/uploads/2024/01/born2be-preloader.gif" alt="" width={300} height={300} unoptimized loading="eager" />
       </div>
     </div>
   );

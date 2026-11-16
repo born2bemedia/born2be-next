@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -29,7 +29,7 @@ export default function CasesPage() {
                 {"Case studies prove we turn strategy into action and ideas into success."}
               </p>
               {" "}
-              <img src="/wp-content/uploads/2023/11/cases-img-01.png" alt="image" />
+              <Image src="/wp-content/uploads/2023/11/cases-img-01.png" alt="image" width={624} height={478} loading="eager" fetchPriority="high" />
               {" "}
             </div>
             {" "}
@@ -53,35 +53,35 @@ export default function CasesPage() {
             <div className="cases-media__content">
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-01.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-01.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-01.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-01.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-02.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-02.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-02.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-02.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-03.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-03.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-03.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-03.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-04.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-04.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-04.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-04.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-05.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-05.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-05.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-05.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-06.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-06.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-06.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-06.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-07.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-07.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-07.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-07.svg" />
               </a>
               {" "}
               <a href="#" className="circle">
-                <img src="/wp-content/uploads/2023/12/icon-social-08.svg" alt="Facebook" data-mobile-src="/wp-content/uploads/2023/12/icon-social-08.svg" />
+                <Image src="/wp-content/uploads/2023/12/icon-social-08.svg" alt="Facebook" width={140} height={140} data-mobile-src="/wp-content/uploads/2023/12/icon-social-08.svg" />
               </a>
               {" "}
               <canvas id="canvas" width="0" height="0"></canvas>
@@ -107,7 +107,7 @@ export default function CasesPage() {
                 {"Reviews platforms we work with"}
               </h2>
               {" "}
-              <img src="/wp-content/uploads/2023/11/img-02.png" alt="image" />
+              <Image src="/wp-content/uploads/2023/11/img-02.png" alt="image" width={1187} height={847} />
               {" "}
             </div>
             {" "}
@@ -117,21 +117,21 @@ export default function CasesPage() {
                 <div className="marquee-track">
                   {" "}
                   <div className="serm-platform-slider__item">
-                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                    <Image src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" width={1604} height={41} />
                   </div>
                   {" "}
                   <div className="serm-platform-slider__item">
-                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                    <Image src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" width={1604} height={41} />
                   </div>
                   {" "}
                   {/* copies for a seamless loop */}
                   {" "}
                   <div className="serm-platform-slider__item" aria-hidden="true">
-                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                    <Image src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" width={1604} height={41} />
                   </div>
                   {" "}
                   <div className="serm-platform-slider__item" aria-hidden="true">
-                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                    <Image src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" width={1604} height={41} />
                   </div>
                   {" "}
                 </div>
@@ -679,7 +679,7 @@ export default function CasesPage() {
                     {" "}
                   </Link>
                   {" "}
-                  <img src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" className="img-float" />
+                  <Image src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" width={484} height={434} className="img-float" />
                   {" "}
                 </div>
                 {" "}
@@ -691,17 +691,17 @@ export default function CasesPage() {
           {" "}
         </div>
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" className="float-ellipce-01" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" width={1601} height={1601} className="float-ellipce-01" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" className="float-ellipce-02" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" width={1401} height={1401} className="float-ellipce-02" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" className="float-ellipce-03" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" width={1801} height={1801} className="float-ellipce-03" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" className="float-ellipce-04" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" width={901} height={901} className="float-ellipce-04" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" className="float-ellipce-05" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" width={904} height={959} className="float-ellipce-05" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" className="float-ellipce-06" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" width={901} height={901} className="float-ellipce-06" loading="eager" unoptimized />
         {" "}
       </div>
       {" "}

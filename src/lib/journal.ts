@@ -14,8 +14,6 @@ export type JournalPost = {
   image: string;
   imageWidth?: number;
   imageHeight?: number;
-  imageSrcSet?: string;
-  imageSizes?: string;
   html: string;
 };
 
@@ -40,8 +38,6 @@ export function getJournalPost(slug: string): JournalPost | null {
     image: String(data.image),
     imageWidth: data.imageWidth,
     imageHeight: data.imageHeight,
-    imageSrcSet: data.imageSrcSet,
-    imageSizes: data.imageSizes,
     html: marked.parse(content, { async: false }),
   };
 }

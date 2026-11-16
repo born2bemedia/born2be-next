@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -29,7 +29,7 @@ export default function FaqPage() {
                 {"The wise man doesn’t give the right answers; he poses the right questions."}
               </p>
               {" "}
-              <img src="/wp-content/uploads/2023/11/faq-image-01.png" alt="image" />
+              <Image src="/wp-content/uploads/2023/11/faq-image-01.png" alt="image" width={624} height={506} loading="eager" fetchPriority="high" />
               {" "}
             </div>
             {" "}
@@ -678,7 +678,7 @@ export default function FaqPage() {
                         <div className="slider-journal__wrapper">
                           {" "}
                           <Link href="/why-business-needs-negative-reviews/" className="slider-journal__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-04.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchPriority="high" srcSet="/wp-content/uploads/2023/11/article-04.png 1752w, /wp-content/uploads/2023/11/article-04-300x167.png 300w, /wp-content/uploads/2023/11/article-04-1024x571.png 1024w, /wp-content/uploads/2023/11/article-04-768x428.png 768w, /wp-content/uploads/2023/11/article-04-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-04.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </Link>
                           {" "}
                           <Link href="/why-business-needs-negative-reviews/" className="slider-journal__title">
@@ -710,7 +710,7 @@ export default function FaqPage() {
                         <div className="slider-journal__wrapper">
                           {" "}
                           <Link href="/what-is-serm-everything-you-need-to-know/" className="slider-journal__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-03.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-03.png 1752w, /wp-content/uploads/2023/11/article-03-300x167.png 300w, /wp-content/uploads/2023/11/article-03-1024x571.png 1024w, /wp-content/uploads/2023/11/article-03-768x428.png 768w, /wp-content/uploads/2023/11/article-03-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-03.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </Link>
                           {" "}
                           <Link href="/what-is-serm-everything-you-need-to-know/" className="slider-journal__title">
@@ -742,7 +742,7 @@ export default function FaqPage() {
                         <div className="slider-journal__wrapper">
                           {" "}
                           <Link href="/how-to-build-a-solid-employer-reputation/" className="slider-journal__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-02.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-02.png 1752w, /wp-content/uploads/2023/11/article-02-300x167.png 300w, /wp-content/uploads/2023/11/article-02-1024x571.png 1024w, /wp-content/uploads/2023/11/article-02-768x428.png 768w, /wp-content/uploads/2023/11/article-02-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-02.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </Link>
                           {" "}
                           <Link href="/how-to-build-a-solid-employer-reputation/" className="slider-journal__title">
@@ -774,7 +774,7 @@ export default function FaqPage() {
                         <div className="slider-journal__wrapper">
                           {" "}
                           <Link href="/what-is-sentiment-analysis/" className="slider-journal__image">
-                            <img width="2336" height="1302" src="/wp-content/uploads/2023/11/article-01.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-01.png 2336w, /wp-content/uploads/2023/11/article-01-300x167.png 300w, /wp-content/uploads/2023/11/article-01-1024x571.png 1024w, /wp-content/uploads/2023/11/article-01-768x428.png 768w, /wp-content/uploads/2023/11/article-01-1536x856.png 1536w, /wp-content/uploads/2023/11/article-01-2048x1141.png 2048w" sizes="(max-width: 2336px) 100vw, 2336px" />
+                            <Image src="/wp-content/uploads/2023/11/article-01.png" alt="" width={2336} height={1302} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </Link>
                           {" "}
                           <Link href="/what-is-sentiment-analysis/" className="slider-journal__title">
@@ -814,7 +814,7 @@ export default function FaqPage() {
                         <div className="slider-journal-nav__wrapper">
                           {" "}
                           <div className="slider-journal-nav__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-04.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-04.png 1752w, /wp-content/uploads/2023/11/article-04-300x167.png 300w, /wp-content/uploads/2023/11/article-04-1024x571.png 1024w, /wp-content/uploads/2023/11/article-04-768x428.png 768w, /wp-content/uploads/2023/11/article-04-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-04.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </div>
                           {" "}
                           <Link href="/why-business-needs-negative-reviews/" className="slider-journal-nav__title">
@@ -846,7 +846,7 @@ export default function FaqPage() {
                         <div className="slider-journal-nav__wrapper">
                           {" "}
                           <div className="slider-journal-nav__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-03.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-03.png 1752w, /wp-content/uploads/2023/11/article-03-300x167.png 300w, /wp-content/uploads/2023/11/article-03-1024x571.png 1024w, /wp-content/uploads/2023/11/article-03-768x428.png 768w, /wp-content/uploads/2023/11/article-03-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-03.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </div>
                           {" "}
                           <Link href="/what-is-serm-everything-you-need-to-know/" className="slider-journal-nav__title">
@@ -878,7 +878,7 @@ export default function FaqPage() {
                         <div className="slider-journal-nav__wrapper">
                           {" "}
                           <div className="slider-journal-nav__image">
-                            <img width="1752" height="977" src="/wp-content/uploads/2023/11/article-02.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-02.png 1752w, /wp-content/uploads/2023/11/article-02-300x167.png 300w, /wp-content/uploads/2023/11/article-02-1024x571.png 1024w, /wp-content/uploads/2023/11/article-02-768x428.png 768w, /wp-content/uploads/2023/11/article-02-1536x857.png 1536w" sizes="(max-width: 1752px) 100vw, 1752px" />
+                            <Image src="/wp-content/uploads/2023/11/article-02.png" alt="" width={1752} height={977} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </div>
                           {" "}
                           <Link href="/how-to-build-a-solid-employer-reputation/" className="slider-journal-nav__title">
@@ -910,7 +910,7 @@ export default function FaqPage() {
                         <div className="slider-journal-nav__wrapper">
                           {" "}
                           <div className="slider-journal-nav__image">
-                            <img width="2336" height="1302" src="/wp-content/uploads/2023/11/article-01.png" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcSet="/wp-content/uploads/2023/11/article-01.png 2336w, /wp-content/uploads/2023/11/article-01-300x167.png 300w, /wp-content/uploads/2023/11/article-01-1024x571.png 1024w, /wp-content/uploads/2023/11/article-01-768x428.png 768w, /wp-content/uploads/2023/11/article-01-1536x856.png 1536w, /wp-content/uploads/2023/11/article-01-2048x1141.png 2048w" sizes="(max-width: 2336px) 100vw, 2336px" />
+                            <Image src="/wp-content/uploads/2023/11/article-01.png" alt="" width={2336} height={1302} className="attachment-post-thumbnail size-post-thumbnail wp-post-image" />
                           </div>
                           {" "}
                           <Link href="/what-is-sentiment-analysis/" className="slider-journal-nav__title">
@@ -997,7 +997,7 @@ export default function FaqPage() {
                     {" "}
                   </Link>
                   {" "}
-                  <img src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" className="img-float" />
+                  <Image src="/wp-content/uploads/2023/11/Mask-group-4-1.png" alt="image" width={484} height={434} className="img-float" />
                   {" "}
                 </div>
                 {" "}
@@ -1009,17 +1009,17 @@ export default function FaqPage() {
           {" "}
         </div>
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" className="float-ellipce-01" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" width={1601} height={1601} className="float-ellipce-01" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" className="float-ellipce-02" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" width={1401} height={1401} className="float-ellipce-02" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" className="float-ellipce-03" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" width={1801} height={1801} className="float-ellipce-03" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" className="float-ellipce-04" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" width={901} height={901} className="float-ellipce-04" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" className="float-ellipce-05" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" width={904} height={959} className="float-ellipce-05" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" className="float-ellipce-06" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" width={901} height={901} className="float-ellipce-06" loading="eager" unoptimized />
         {" "}
       </section>
       {" "}

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/forms/ContactForm';
 
@@ -19,7 +19,7 @@ export default function CareerPage() {
               {"Born2Be is looking for the best talent. Maybe, you?"}
             </h1>
             {" "}
-            <img src="/wp-content/uploads/2023/11/career-img-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/career-img-01.png" alt="image" width={1388} height={1347} loading="eager" fetchPriority="high" />
             {" "}
             <div className="career-hero__content">
               {" "}
@@ -726,7 +726,7 @@ export default function CareerPage() {
                     {" "}
                   </Link>
                   {" "}
-                  <img src="/wp-content/uploads/2023/11/faq-image-01.png" alt="image" className="img-float" />
+                  <Image src="/wp-content/uploads/2023/11/faq-image-01.png" alt="image" width={624} height={506} className="img-float" />
                   {" "}
                 </div>
                 {" "}
@@ -738,17 +738,17 @@ export default function CareerPage() {
           {" "}
         </div>
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" className="float-ellipce-01" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-01.png" alt="image" width={1601} height={1601} className="float-ellipce-01" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" className="float-ellipce-02" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-02.png" alt="image" width={1401} height={1401} className="float-ellipce-02" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" className="float-ellipce-03" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-03.png" alt="image" width={1801} height={1801} className="float-ellipce-03" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" className="float-ellipce-04" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-04.png" alt="image" width={901} height={901} className="float-ellipce-04" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" className="float-ellipce-05" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-05.png" alt="image" width={904} height={959} className="float-ellipce-05" loading="eager" unoptimized />
         {" "}
-        <img src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" className="float-ellipce-06" />
+        <Image src="/wp-content/uploads/2023/12/ellipse-06.png" alt="image" width={901} height={901} className="float-ellipce-06" loading="eager" unoptimized />
         {" "}
       </section>
       {" "}

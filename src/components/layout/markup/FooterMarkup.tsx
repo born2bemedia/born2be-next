@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 // Converted 1:1 from the WordPress theme markup (born2be-media). Edit freely.
+import Image from 'next/image';
 import Link from 'next/link';
 import JobForm from '@/components/forms/JobForm';
 import PlanForm from '@/components/forms/PlanForm';
@@ -18,7 +18,7 @@ export default function FooterMarkup() {
             <div className="footer__col-01">
               {" "}
               <Link href="/" className="footer__logo">
-                <img src="/wp-content/uploads/2023/11/b2b-logo-black.svg" alt="logo" />
+                <Image src="/wp-content/uploads/2023/11/b2b-logo-black.svg" alt="logo" width={208} height={26} />
               </Link>
               {" "}
               <p className="footer__label">
@@ -234,7 +234,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -277,7 +277,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -320,7 +320,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -363,7 +363,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -406,7 +406,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -442,7 +442,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -484,7 +484,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
@@ -520,7 +520,7 @@ export default function FooterMarkup() {
               {" "}
             </div>
             {" "}
-            <img src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" />
+            <Image src="/wp-content/uploads/2023/11/popup-back-01.png" alt="image" width={1187} height={437} />
             {" "}
           </div>
           {" "}
