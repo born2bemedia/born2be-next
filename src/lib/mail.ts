@@ -1,6 +1,8 @@
 import 'server-only';
 import nodemailer from 'nodemailer';
 
+import { getMailConfig } from './mail-config';
+
 export type MailAttachment = { filename: string; content: Buffer; contentType?: string };
 
 export function escapeHtml(text: unknown): string {
@@ -55,7 +57,7 @@ function createTransport() {
       }),
     };
   }
-  throw new Error('Email configuration is missing: set the GMAIL_* (OAuth) or SMTP_* variables.');
+  throw new Error(`Email configuration is missing: ${getMailConfig().problems.join('; ')}`);
 }
 
 export async function sendAdminMail(opts: { subject: string; html: string; replyTo?: string; attachments?: MailAttachment[] }) {

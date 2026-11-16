@@ -12,6 +12,12 @@ npm run dev                  # http://localhost:3000
 
 `npm run build && npm run start` runs the production build.
 
+## Checks
+
+`npm run check` = lint + type check + production build. GitHub Actions (`.github/workflows/ci.yml`) runs the same on every push and pull request, without any secrets: if it is green, Vercel can build the site too.
+
+The build does not need the mail variables. Without them the site works and only the forms cannot send; the server then logs a `[forms] Emails from the site forms will NOT be sent: …` warning at start (visible in Vercel → Logs).
+
 ## Structure
 
 | Path | What |
@@ -49,11 +55,13 @@ Then add its SEO entry to `src/content/seo.json` under `"/<url-slug>/"`. The jou
 
 ## Forms
 
-All forms post to `/api/forms/` and send an email to `ADMIN_EMAIL` through SMTP (see `.env.example`).
+All forms post to `/api/forms/` and send an email to `ADMIN_EMAIL` (contact@born2be.media) from `MAIL_FROM`, through SMTP with a Google App Password or through Gmail OAuth (see `.env.example`).
+
+Note: the WordPress site used Gmail OAuth via WP Mail SMTP, but that connection has been failing since 2025-04-23 ("Account has been deleted"), so it cannot be reused.
 Vercel limits a request to 4.5 MB, so the CV upload on /career is capped at 4 MB.
 
 ## Deploy (Vercel)
 
 1. Push the repo to GitHub, import it in Vercel (framework: Next.js, no extra settings).
-2. Add the environment variables from `.env.example`.
+2. Add the environment variables from `.env.example` (for the forms: `ADMIN_EMAIL`, `MAIL_FROM`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`).
 3. Point the domain to Vercel when the site is checked.

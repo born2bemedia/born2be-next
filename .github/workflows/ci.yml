@@ -1,0 +1,25 @@
+# Runs on every push and pull request: the same checks Vercel needs to deploy.
+# If this fails, the site would not build on Vercel either.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Type check
+        run: npm run typecheck
+      # No mail/SMTP secrets here on purpose: the build must not depend on them.
+      - name: Build
+        run: npm run build
