@@ -538,7 +538,7 @@ export default function AgencyPage() {
                 {" "}
                 <div className="agency-slider__buttons">
                   {" "}
-                  <button type="button" className="agency-slider__btn-prev slick-arrow">
+                  <button type="button" className="agency-slider__btn-prev">
                     {" "}
                     <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                       {" "}
@@ -550,7 +550,7 @@ export default function AgencyPage() {
                     {" "}
                   </button>
                   {" "}
-                  <button type="button" className="agency-slider__btn-next slick-arrow">
+                  <button type="button" className="agency-slider__btn-next">
                     {" "}
                     <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                       {" "}

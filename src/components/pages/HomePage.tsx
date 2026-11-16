@@ -438,7 +438,7 @@ export default function HomePage() {
               {" "}
               <div className="home-assist-slider__buttons">
                 {" "}
-                <button type="button" className="home-assist-slider__btn-prev slick-arrow">
+                <button type="button" className="home-assist-slider__btn-prev">
                   {" "}
                   <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {" "}
@@ -450,7 +450,7 @@ export default function HomePage() {
                   {" "}
                 </button>
                 {" "}
-                <button type="button" className="home-assist-slider__btn-next slick-arrow">
+                <button type="button" className="home-assist-slider__btn-next">
                   {" "}
                   <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     {" "}

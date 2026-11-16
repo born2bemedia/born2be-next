@@ -1551,39 +1551,7 @@
         margin: 0 auto;
     } */
 
-    .slick-prev { 
-        font-size: 0;
-        position: absolute;
-        bottom: -100px;
-        left: 0;
-        width: 30px;
-        height: 30px;
-        background-image: url('/wp-content/uploads/2023/12/born-arrow-left.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
 
-        @media(min-width: 992px) { 
-            display: none !important;
-        }
-    }
-
-    .slick-next { 
-        font-size: 0;
-        position: absolute;
-        bottom: -100px;
-        left: 100px;
-        width: 30px;
-        height: 30px;
-        background-image: url('/wp-content/uploads/2023/12/born-arrow-right.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-
-        @media(min-width: 992px) { 
-            display: none !important;
-        }
-    }
 
 
     &__item {
@@ -1678,31 +1646,7 @@
     @media(max-width: 992px) { 
         margin: 0;
     }
-    .slick-prev { 
-        font-size: 0;
-        position: absolute;
-        bottom: -130px;
-        right: 60px;
-        width: 30px;
-        height: 30px;
-        background-image: url('/wp-content/uploads/2023/12/born-arrow-left.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-    }
 
-    .slick-next { 
-        font-size: 0;
-        position: absolute;
-        bottom: -130px;
-        right: 0px;
-        width: 30px;
-        height: 30px;
-        background-image: url('/wp-content/uploads/2023/12/born-arrow-right.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-    }
 
     &__item {
         max-width: 280px;
