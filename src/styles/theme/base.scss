@@ -1,0 +1,60 @@
+@import 'mixin';
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* html,body{
+	overflow-x: hidden;
+} */
+
+body { 
+    font-family: 'Avant', sans-serif;
+	font-size: 16px;
+	color: #282828;
+	line-height: 19px;
+	font-weight: 400;
+	margin: 0;
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+
+.site {
+	position: relative;
+	overflow: hidden;
+}
+/* 
+html, body {
+	overflow-x: hidden;
+} */
+
+
+/* Tabs */
+._tabs {
+}
+._tabs-item {
+}
+._tabs-block {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+
+
+body canvas{
+	position: absolute;
+	z-index: -1;
+	display: none;
+}
+
+.cases-media__content canvas { 
+	display: block !important;
+	position: static;
+}

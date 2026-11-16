@@ -1,0 +1,30 @@
+// Port of the "Preloader Plus" plugin used on the WordPress site:
+// black screen with the animated logo, fades out once the page has loaded.
+.preloader-plus {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  opacity: 1;
+  transition: opacity 1000ms ease;
+
+  &.complete {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .preloader-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .preloader-custom-img {
+    width: 250px;
+    max-width: 70vw;
+    height: auto;
+  }
+}

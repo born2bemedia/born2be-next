@@ -1,0 +1,1312 @@
+@import 'mixin';
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    &::before { 
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 150vw;
+        transform: translate(-50%, 0);
+        height: 0.7px;
+        background-color: #686868;
+    }
+    
+    &__container {
+        
+        &._container {  
+            @media(max-width: 767px) { 
+                padding: 0;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @media(max-width: 991px) { 
+            padding: 25px 0;
+        }
+    }
+
+    &__col-01 {
+
+        @media(max-width: 767px) { 
+            padding-left: 16px;
+        }
+    }
+
+    &__logo {
+
+        img { 
+            @media(max-width: 575px) { 
+                width: 180px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__col-02 {
+        
+    }
+
+    &__nav-main {
+
+        &.two { 
+
+            .menu-list { 
+                display: flex;
+                align-items: center;
+                @include adaptiv-value('column-gap', 48, 25, 1);
+    
+                @include adaptiv-value('padding-top', 32, 20, 1);
+                @include adaptiv-value('padding-bottom', 32, 20, 1);
+                @include adaptiv-value('padding-right', 108, 20, 1);
+                @include adaptiv-value('padding-left', 108, 20, 1);
+                border-left: 1px solid #686868;
+                border-right: 1px solid #686868;
+                position: relative;
+    
+                li { 
+                    a { 
+                        color: var(--4, #282828);
+                        font-family: 'Avant', sans-serif;
+                        font-size: 16px;
+                        font-style: italic;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+    
+                    &.menu-item-321 { 
+                        .sub-menu { 
+                            position: absolute;
+                            left: 0;
+                            top: 85px;
+                            @include adaptiv-value('width', 944, 200, 1);
+    
+                            border-top: none;
+                            /* background: rgba(217, 217, 217, 0.05); */
+                            border: 1px solid #686868;
+                            background-color: #F2F2F2;
+    
+                            @include adaptiv-value('padding-top', 48, 20, 1);
+                            @include adaptiv-value('padding-right', 87, 20, 1);
+                            @include adaptiv-value('padding-bottom', 48, 20, 1);
+                            @include adaptiv-value('padding-left', 108, 40, 1);
+                            display: grid;
+                            grid-template-columns: minmax(auto, 15%) minmax(auto, 85%);
+                            @include adaptiv-value('column-gap', 80, 25, 1);
+                            @include adaptiv-value('row-gap', 48, 15, 1);
+                            z-index: 30;
+                            li { 
+                                a { 
+                                    transition: all 0.3s ease 0s;
+                                    position: relative;
+    
+                                    &:hover { 
+                                        color: #FFC169;
+                                        font-weight: 700;
+                                    }
+                                }
+    
+                                &:nth-child(1) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 600px;
+                                            top: 0;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-01.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(2) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 410px;
+                                            
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-02.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(3) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 600px;
+                                            top: -65px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-03.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(4) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 410px;
+                                            top: -65px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-04.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(5) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 600px;
+                                            top: -135px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-05.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(6) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 410px;
+                                            top: -135px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-06.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    &.menu-item-57 { 
+                        .sub-menu { 
+                            position: absolute;
+                            left: 0;
+                            top: 85px;
+                            @include adaptiv-value('width', 944, 200, 1);
+    
+                            border: 1px solid #686868;
+                            background-color: #F2F2F2;
+                            border-top: none;
+    
+                            @include adaptiv-value('padding-top', 48, 20, 1);
+                            @include adaptiv-value('padding-right', 87, 20, 1);
+                            @include adaptiv-value('padding-bottom', 48, 20, 1);
+                            @include adaptiv-value('padding-left', 108, 40, 1);
+                            display: grid;
+                            grid-template-columns: minmax(auto, 15%) minmax(auto, 85%);
+                            @include adaptiv-value('column-gap', 80, 25, 1);
+                            @include adaptiv-value('row-gap', 48, 15, 1);
+                            z-index: 30;
+                            li { 
+                                a { 
+                                    transition: all 0.3s ease 0s;
+                                    position: relative;
+    
+                                    &:hover { 
+                                        color: #FFC169;
+                                        font-weight: 700;
+                                    }
+                                }
+    
+                                &:nth-child(1) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 600px;
+                                            top: -40px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-07.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(2) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 410px;
+                                            top: -25px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-08.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(3) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 600px;
+                                            top: -105px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-09.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(4) { 
+                                    a { 
+                                        &::before { 
+                                            content: '';
+                                            position: absolute;
+                                            width: 150px;
+                                            height: 150px;
+                                            left: 410px;
+                                            top: -105px;
+                                            background-image: url('/wp-content/uploads/2023/12/menu-icon-white-10.svg');
+                                            background-size: 150px;
+                                            background-repeat: no-repeat;
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition: all 0.3s ease 0s;
+                                        }
+    
+                                        &:hover { 
+    
+                                            &::before { 
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-list {
+            display: flex;
+            align-items: center;
+            @include adaptiv-value('column-gap', 48, 25, 1);
+
+            @include adaptiv-value('padding-top', 32, 20, 1);
+            @include adaptiv-value('padding-bottom', 32, 20, 1);
+            @include adaptiv-value('padding-right', 108, 20, 1);
+            @include adaptiv-value('padding-left', 108, 20, 1);
+            border-left: 1px solid #686868;
+            border-right: 1px solid #686868;
+            position: relative;
+
+            li { 
+                a { 
+                    color: var(--4, #FFF);
+                    font-family: 'Avant', sans-serif;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                &.menu-item-321 { 
+                    .sub-menu { 
+                        position: absolute;
+                        left: 0;
+                        top: 85px;
+                        @include adaptiv-value('width', 944, 200, 1);
+
+                        border: 1px solid rgba(255, 255, 255, 0.30);
+                        border-top: none;
+                        /* background: rgba(217, 217, 217, 0.05); */
+                        background-color: #282828e6;
+
+                        @include adaptiv-value('padding-top', 48, 20, 1);
+                        @include adaptiv-value('padding-right', 87, 20, 1);
+                        @include adaptiv-value('padding-bottom', 48, 20, 1);
+                        @include adaptiv-value('padding-left', 108, 40, 1);
+                        display: grid;
+                        grid-template-columns: minmax(auto, 15%) minmax(auto, 85%);
+                        @include adaptiv-value('column-gap', 80, 25, 1);
+                        @include adaptiv-value('row-gap', 48, 15, 1);
+                        z-index: 30;
+                        li { 
+                            a { 
+                                transition: all 0.3s ease 0s;
+                                position: relative;
+
+                                &:hover { 
+                                    color: #FFC169;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            &:nth-child(1) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 600px;
+                                        top: 0;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-01.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 410px;
+                                        
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-02.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 600px;
+                                        top: -65px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-03.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 410px;
+                                        top: -65px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-04.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(5) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 600px;
+                                        top: -135px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-05.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(6) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 410px;
+                                        top: -135px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-06.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.menu-item-57 { 
+                    .sub-menu { 
+                        position: absolute;
+                        left: 0;
+                        top: 85px;
+                        @include adaptiv-value('width', 944, 200, 1);
+
+                        border: 1px solid rgba(255, 255, 255, 0.30);
+                        border-top: none;
+                        /* background: rgba(217, 217, 217, 0.05); */
+                        background-color: #282828e6;
+
+                        @include adaptiv-value('padding-top', 48, 20, 1);
+                        @include adaptiv-value('padding-right', 87, 20, 1);
+                        @include adaptiv-value('padding-bottom', 48, 20, 1);
+                        @include adaptiv-value('padding-left', 108, 40, 1);
+                        display: grid;
+                        grid-template-columns: minmax(auto, 15%) minmax(auto, 85%);
+                        @include adaptiv-value('column-gap', 80, 25, 1);
+                        @include adaptiv-value('row-gap', 48, 15, 1);
+                        z-index: 30;
+                        li { 
+                            a { 
+                                transition: all 0.3s ease 0s;
+                                position: relative;
+
+                                &:hover { 
+                                    color: #FFC169;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            &:nth-child(1) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 600px;
+                                        top: -40px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-07.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 410px;
+                                        top: -25px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-08.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 600px;
+                                        top: -105px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-09.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) { 
+                                a { 
+                                    &::before { 
+                                        content: '';
+                                        position: absolute;
+                                        width: 150px;
+                                        height: 150px;
+                                        left: 410px;
+                                        top: -105px;
+                                        background-image: url('/wp-content/uploads/2023/12/born2be-menu-icon-10.svg');
+                                        background-size: 150px;
+                                        background-repeat: no-repeat;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all 0.3s ease 0s;
+                                    }
+
+                                    &:hover { 
+
+                                        &::before { 
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            #menu-item-321 { 
+
+                &._active { 
+                    a { 
+
+                        /* &:first-child { 
+                            font-weight: 600;
+                            color: #FFC169;
+                        } */
+                    }
+                }
+                
+                .sub-menu { 
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease 0s;
+                    &._active { 
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            #menu-item-57  {
+                
+                &._active { 
+                    a { 
+
+                        /* &:nth-child(1) { 
+                            font-weight: 600;
+                            color: #FFC169;
+                        } */
+                    }
+                }
+                
+                .sub-menu { 
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease 0s;
+                    &._active { 
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 991px) { 
+            display: none;
+        }
+    }
+
+    &__col-03 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 40px;
+
+        @media(max-width: 767px) { 
+            padding: 0 16px;
+        }
+    }
+
+    &__menu-desktop { 
+        position: absolute;
+        right: 0;
+        top: 85px;
+        @include adaptiv-value('width', 940, 200, 1);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        border-top: none;
+        /* background: rgba(217, 217, 217, 0.05); */
+        background-color: #282828e6;
+
+        @include adaptiv-value('padding-top', 48, 20, 1);
+        @include adaptiv-value('padding-right', 87, 20, 1);
+        @include adaptiv-value('padding-bottom', 48, 20, 1);
+        @include adaptiv-value('padding-left', 108, 40, 1);
+        display: grid;
+        grid-template-columns: minmax(auto, 15%) minmax(auto, 85%);
+        @include adaptiv-value('column-gap', 80, 25, 1);
+        @include adaptiv-value('row-gap', 48, 15, 1);
+        z-index: 30;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiv-value('column-gap', 135, 0, 1);
+
+        &.two { 
+            background-color: #F2F2F2;
+            border-color: #686868;
+
+            .header__nav-desk { 
+
+                .menu-list { 
+                    li { 
+                        a { 
+                            color: #282828;
+
+                            &:hover { 
+                                color: #FFC169;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__media { 
+                a { 
+                    svg{ 
+                        path { 
+                            fill: #282828;
+                        }
+                    }
+
+                    &:hover { 
+                        svg { 
+                            path { 
+                                fill: #9848DF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &._active { 
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media(max-width: 768px) { 
+            display: none !important;
+        }
+    }
+
+    &__media {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 160px;
+    }
+
+    &__menu-mobile { 
+        position: absolute;
+        top: 97px;
+        right: -100vw;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        height: 100vh;
+        background-color: #1f1f1f;
+
+        @media(min-width: 768px) {
+            display: none;
+        }
+
+        &._active { 
+            right: 0;
+        }
+
+        &.two { 
+            background-color: #fff;
+
+            .header__menu-mob { 
+
+                .menu-list { 
+                    li { 
+                        border-color: #c1c1c1;
+                        a { 
+                            color: #282828;
+                        }
+                        
+                        &.menu-item-321 { 
+                            border-color: #c1c1c1;
+                            a { 
+
+                                &::before { 
+                                    background-image: url('/wp-content/uploads/2023/12/iconoir_arrow-right-black.svg');
+                                }
+                            }
+
+                            .sub-menu { 
+                                a {
+                                    background-color: #F2F2F2;
+                                    border-color: #c1c1c1;
+                                    color: var(--3, #282828);
+                                    font-family: 'Avant', sans-serif;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                }
+                            }
+                        }
+
+                        &.menu-item-249 { 
+                            border-color: #c1c1c1;
+                            a { 
+
+                                &::before { 
+                                    background-image: url('/wp-content/uploads/2023/12/iconoir_arrow-right-black.svg');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu-mob { 
+        
+        .menu-list { 
+            display: grid;
+            grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+
+            li { 
+
+                &.menu-item-321 { 
+                    grid-column-start: span 2;
+                    grid-row-start: 1;
+                    border-top: 1px solid #626262;
+
+                    &._active { 
+
+                        a { 
+                            &::before { 
+                                transform: translate(0, -50%) rotate(90deg);
+                            }
+                        }
+                    }
+
+                    .sub-menu { 
+                        display: none !important;
+
+                        &._active { 
+                            display: grid !important; 
+                        }
+                    }
+                }
+
+                &.menu-item-249 { 
+                    grid-column-start: span 2;
+                    grid-row-start: 2;
+                    border-top: 1px solid #626262;
+                    border-bottom: 1px solid #626262;
+
+                    &._active { 
+
+                        a { 
+                            &::before { 
+                                transform: translate(0, -50%) rotate(90deg);
+                            }
+                        }
+                    }
+
+                    .sub-menu { 
+                        display: none !important;
+
+                        &._active { 
+                            display: grid !important;
+                        }
+                    }
+                }
+
+                &.menu-item-254 { 
+                    grid-column-start: 1;
+                    grid-row-start: 3;
+                    border-right: 1px solid #626262;
+                    border-bottom: 1px solid #626262;
+                }
+
+                &.menu-item-255 { 
+                    grid-column-start: 2;
+                    grid-row-start: 3;
+                    border-bottom: 1px solid #626262;
+                }
+
+                &.menu-item-256 { 
+                    grid-column-start: 1;
+                    grid-row-start: 4;
+                    border-right: 1px solid #626262;
+                    border-bottom: 1px solid #626262;
+                }
+
+                &.menu-item-257 { 
+                    grid-column-start: 2;
+                    grid-row-start: 4;
+                    border-bottom: 1px solid #626262;
+                }
+
+                &.menu-item-258 { 
+                    grid-column-start: 1;
+                    grid-row-start: 5;
+                    border-right: 1px solid #626262;
+                    border-bottom: 1px solid #626262;
+                }
+
+                &.menu-item-259 { 
+                    grid-column-start: 2;
+                    grid-row-start: 5;
+                    border-bottom: 1px solid #626262;
+                }
+
+                a { 
+                    color: #FFF;
+                    font-family: 'Avant', sans-serif;
+                    font-size: 24px;
+                    font-style: italic;
+                    font-weight: 600;
+                    line-height: normal;
+                    width: 100%;
+                    padding: 30px 16px;
+                    display: flex;
+                }
+
+                &.menu-item-has-children { 
+                    
+                    a { 
+                        position: relative;
+                        &::before { 
+                            content: '';
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            top: 50%;
+                            right: 16px;
+                            transform: translate(0, -50%);
+                            background-image: url('/wp-content/uploads/2023/12/menu-arrow-mobile.svg');
+                            background-repeat: no-repeat;
+                            background-position: right center;
+                            background-size: 24px;
+                            transition: all 0.3s ease 0s;
+                        }
+                    }
+
+                    .sub-menu { 
+                        display: grid;
+                        grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+                        
+                        li { 
+                            &:nth-child(odd) { 
+                                a { 
+                                    border: 1px solid #626262;
+                                    border-left: none;
+                                }
+                            }
+
+                            &:nth-child(even) { 
+                                a { 
+                                    border-top: 1px solid #626262;
+                                    border-bottom: 1px solid #626262;
+                                    padding: 22px 0 22px 16px;
+                                }
+                            }
+
+                            a  {
+                                padding: 22px 16px;
+                                background-color: #282828;
+
+                                color: #FFF;
+                                font-family: 'Avant', sans-serif;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+
+                                &::before { 
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__media-mobile { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 24px 48px 24px;
+
+        &.two { 
+
+            a { 
+                svg { 
+                    path { 
+                        fill: #282828;
+                    }
+                }
+
+                &:hover { 
+                    svg { 
+                        path {
+                            fill: #9848DF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__social-link { 
+        svg { 
+            path { 
+                transition: all 0.3s ease 0s;
+            }
+        }
+
+        &:hover { 
+            svg { 
+                path { 
+                    fill: #9848DF;
+                }
+            }
+        }
+    }
+
+    &__nav-desk { 
+
+        .menu-list { 
+            display: grid;
+            grid-template-columns: minmax(auto, 33.3333%) minmax(auto, 33.3333%) minmax(auto, 33.3333%); 
+            row-gap: 48px;
+            @include adaptiv-value('column-gap', 100, 0, 1);
+            justify-content: space-between;
+
+            li { 
+                a { 
+                    transition: all 0.3s ease 0s;
+                    color: #FFF;
+                    font-family: 'Avant', sans-serif;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: normal;
+                    &:hover { 
+                        font-weight: 600;
+                        color: #FFC169;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link-connect {
+        border-radius: 100px;
+        background: #FFC169;
+        padding: 16px 32px 14px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+
+        span { 
+            color: var(--3, #282828);
+            font-family: 'Avant', sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: normal;
+            text-align: center;
+            transition: all 0.3s ease 0s;
+        }
+
+        &:hover { 
+            background-color: #ffff;
+        }
+
+        @media(max-width: 767px) {
+            display: none;
+        }
+
+        &.two { 
+
+            &:hover { 
+                background-color: #282828;
+                span { 
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__btn-menu {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #fff;
+        border-radius: 100px;
+        background-image: url('/wp-content/uploads/2023/12/born-menu-open.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center center;
+
+        &._active { 
+            background-image: url('/wp-content/uploads/2023/12/born-menu-close.svg');
+        }
+       
+
+        &.two { 
+            background-image: url('/wp-content/uploads/2023/12/born-menu-open-black.svg');
+            border-color: #282828;
+
+            &._active { 
+
+                background-image: url('/wp-content/uploads/2023/12/born-menu-close-black.svg');
+            }
+        }
+    }
+}

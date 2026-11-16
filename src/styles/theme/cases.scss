@@ -1,0 +1,267 @@
+@import 'mixin';
+
+.cases-contacts {
+    @include adaptiv-value('margin-top', 200, 100, 1);
+    @include adaptiv-value('padding-top', 200, 100, 1);
+    @include adaptiv-value('padding-bottom', 200, 100, 1);
+     
+    background-color: #1F1F1F;
+    overflow: hidden;
+    position: relative;
+
+    @media(max-width: 767px) { 
+        background-color: transparent;
+        background-image: url('/wp-content/uploads/2023/12/born-home-back-mobile-03.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-top: 0;
+    }
+
+    
+
+    .float-ellipce-01 {
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation01 10s infinite linear 0s;
+
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-02 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation02 10s infinite linear -1s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-03 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation03 10s infinite linear -2s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-04 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation04 10s infinite linear -3s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-05 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation05 10s infinite linear -4s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-06 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation06 10s infinite linear -10s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    &__container {
+    }
+
+    &__body {
+        position: relative;
+        z-index: 30;
+    }
+
+    &__form {
+    }
+}
+
+
+.cases-hero {
+    @include adaptiv-value('padding-top', 210, 170, 1);
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include adaptiv-value('padding-bottom', 88, 30, 1);
+
+        @media(max-width: 991px) { 
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 24px;
+            column-gap: 0;
+            padding-bottom: 100px;
+        }
+    }
+
+    &__col-01 {
+
+    }
+
+    &__title {
+        color: var(--3, #282828);
+        font-family: 'Avant', sans-serif;
+        @include adaptiv-value('font-size', 80, 36, 1);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__col-02 {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        img { 
+            max-width: 208px;
+            width: 100%;
+            object-fit: cover;
+
+            @media(max-width: 991px) { 
+                margin-top: 80px;
+            }
+        }
+
+        @media(max-width: 991px) { 
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__text {
+        color: var(--3, #282828);
+        font-family: 'Avant', sans-serif;
+        @include adaptiv-value('font-size', 32, 24, 1);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiv-value('margin-left', 100, 0, 1);
+        max-width: 560px;
+
+        @media(max-width: 991px) { 
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.cases-media {
+    
+    background-image: url('/wp-content/uploads/2023/11/cases-back-01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 20px;
+
+    @media(max-width: 767px) { 
+        padding-bottom: 0;
+    }
+    &__container {
+    }
+
+    &__body {
+
+        @media(max-width: 767px) {
+            padding-bottom: 300px;
+            background-image: url('/wp-content/uploads/2023/12/social-icons-bottom.svg');
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__title {
+        @include adaptiv-value('padding-top', 200, 100, 1);
+        color: var(--1, #FFF);
+        text-align: center;
+        font-family:'Avant', sans-serif;
+        @include adaptiv-value('font-size', 60, 36, 1);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        height: 520px;
+        .circle { 
+            position: absolute;
+        
+            img { 
+                width: 140px;
+                height: 140px;
+                @media(max-width: 767px) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            &:nth-child(1) { 
+                top: 0;
+                left: 0;
+            }
+
+            &:nth-child(2) { 
+                top: 10px;
+                left: 16%;
+            }
+
+            &:nth-child(3) { 
+                top: 30px;
+                left: 25%;
+            }
+
+            &:nth-child(4) { 
+                top: 10px;
+                left: 35%;
+            }
+
+            &:nth-child(5) { 
+                top: 40px;
+                left: 45%;
+            }
+
+            &:nth-child(6) { 
+                top: 10px;
+                left: 55%;
+            }
+
+            &:nth-child(7) { 
+                top: 20px;
+                left: 68%;
+            }
+
+            &:nth-child(8) { 
+                top: 0;
+                left: 80%;
+            }
+        }
+
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+}
+
+/* #canvas { 
+    position: absolute;
+} */

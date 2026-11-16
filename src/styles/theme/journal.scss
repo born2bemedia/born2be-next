@@ -1,0 +1,225 @@
+@import 'mixin';
+
+.journal-hero {
+    @include adaptiv-value('padding-top', 200, 170, 1);
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        @include adaptiv-value('padding-bottom', 95, 30, 1);
+        &::before { 
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 150vw;
+            height: 0.7px;
+            background-color: #636363;
+        }
+
+        @media(max-width: 1199px) { 
+            column-gap: 50px;
+        }
+
+        @media(max-width: 767px) { 
+            flex-direction: column;
+            align-items: flex-start;
+            column-gap: 0;
+            row-gap: 25px;
+        }
+    }
+
+    &__title {
+        color: var(--3, #282828);
+        font-family: 'Avant', sans-serif;
+        @include adaptiv-value('font-size', 80, 36, 1);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__text {
+        color: var(--3, #282828);
+        font-family: 'Avant', sans-serif;
+        @include adaptiv-value('font-size', 32, 24, 1);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        max-width: 650px;
+        @include adaptiv-value('margin-right', 175, 50, 1);
+
+        @media(max-width: 1199px) { 
+            margin-right: 0;
+        }
+    }
+}
+
+
+.journal-articles {
+    padding-top: 80px;
+    @include adaptiv-value('padding-bottom', 175, 100, 1);
+    &__container {
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 32px;
+
+        @media(max-width: 767px) { 
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__article {
+    }
+
+    &__image {
+        img { 
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 4px;
+
+            @media(max-width: 767px) { 
+                height: 200px;
+            }
+        }
+    }
+
+    &__title {
+
+        h2 { 
+            color: var(--3, #282828);
+            font-family: 'Avant', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 24px 0 32px 0;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #b3b3b3;
+            transition: all 0.3s ease 0s;
+
+            &:hover { 
+                color: #9848DF;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+
+    &__date {
+        color: var(--5, #636363);
+        font-family:  'Avant', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__category {
+        color: var(--5, #636363);
+        font-family:  'Avant', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+}
+
+
+.journal-contacts {
+    @include adaptiv-value('padding-top', 200, 100, 1);
+    @include adaptiv-value('padding-bottom', 200, 100, 1);
+    background-color: #1F1F1F;
+    overflow: hidden;
+    position: relative;
+
+    @media(max-width: 767px) { 
+        background-color: transparent;
+        background-image: url('/wp-content/uploads/2023/12/born-home-back-mobile-03.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    
+
+    .float-ellipce-01 {
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation01 10s infinite linear 0s;
+
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-02 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation02 10s infinite linear -1s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-03 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation03 10s infinite linear -2s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-04 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation04 10s infinite linear -3s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-05 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation05 10s infinite linear -4s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    .float-ellipce-06 { 
+        position: absolute;
+        max-width: 75%;
+        animation: floatAnimation06 10s infinite linear -10s;
+        @media(max-width: 767px) { 
+            display: none;
+        }
+    }
+
+    &__container {
+    }
+
+    &__body {
+        position: relative;
+        z-index: 30;
+    }
+
+    &__form {
+    }
+}
