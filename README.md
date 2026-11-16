@@ -20,14 +20,14 @@ npm run dev                  # http://localhost:3000
 | `src/app/(alt-header)/…` | Pages with the black-logo header (agency, career, cases, faq, journal) and journal posts (`[slug]`) |
 | `src/components/pages/*Page.tsx` | Page markup, converted 1:1 from the WordPress theme (same HTML classes) |
 | `src/components/layout/markup/` | Header (two variants), footer and the popups |
-| `src/components/layout/ThemeScripts.tsx` | Theme behaviour: menu, popups, accordions, scroll animations, sliders (slick), Matter.js on /cases |
+| `src/components/layout/ThemeScripts.tsx` | Theme behaviour: menu, popups, accordions, scroll animations, sliders (Swiper), Matter.js on /cases |
 | `src/components/forms/` | The four forms (former Contact Form 7), same markup/classes |
 | `src/app/api/forms/route.ts` | Form handler: validation, honeypot, sends email via SMTP |
 | `src/content/journal/*.md` | Journal posts (frontmatter + HTML/Markdown body). Add a file = add a post |
 | `src/content/seo.json` | Titles/descriptions/OG per URL (migrated from Yoast) |
 | `src/styles/theme/` | Original theme SCSS, loaded globally in the same order as on WordPress |
 | `public/wp-content/uploads/` | Images, at the same paths as on WordPress (old image URLs keep working) |
-| `public/vendor/` | jQuery 3.7.1 + slick 1.8 (the exact files the old site used, needed by the sliders) |
+| `src/styles/_sliders.scss` | Swiper base styles, slide widths, CSS marquees ("Apply the power of four S", SERM/Cases logo strip) |
 
 ## Adding a journal post
 

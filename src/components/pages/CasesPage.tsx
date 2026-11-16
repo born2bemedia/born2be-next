@@ -114,15 +114,27 @@ export default function CasesPage() {
             <div className="serm-platform__row-02">
               {" "}
               <div className="serm-platform-slider">
-                {" "}
-                <div className="serm-platform-slider__item">
-                  <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                <div className="marquee-track">
+                  {" "}
+                  <div className="serm-platform-slider__item">
+                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                  </div>
+                  {" "}
+                  <div className="serm-platform-slider__item">
+                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                  </div>
+                  {" "}
+                  {/* copies for a seamless loop */}
+                  {" "}
+                  <div className="serm-platform-slider__item" aria-hidden="true">
+                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                  </div>
+                  {" "}
+                  <div className="serm-platform-slider__item" aria-hidden="true">
+                    <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
+                  </div>
+                  {" "}
                 </div>
-                {" "}
-                <div className="serm-platform-slider__item">
-                  <img src="/wp-content/uploads/2023/11/marquee-img-03.svg" alt="image" />
-                </div>
-                {" "}
               </div>
               {" "}
             </div>

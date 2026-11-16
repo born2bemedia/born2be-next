@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 /*
  * Port of the WordPress theme scripts (assets/js/*.js): menu, popups, spollers (accordions),
- * scroll animations, sticky columns, slick sliders and the Matter.js "falling icons" on /cases.
+ * scroll animations, sticky columns, Swiper sliders and the Matter.js "falling icons" on /cases.
  * Everything is (re)bound after each client-side navigation and cleaned up before the next one.
  */
 export default function ThemeScripts() {
@@ -363,83 +363,117 @@ function initMatter($$: Q, on: On, cleanups: Array<() => void>) {
   check();
 }
 
-/* ---------- slick sliders (script.js) ---------- */
-const scriptPromises = new Map<string, Promise<void>>();
+/* ---------- sliders (Swiper; replaced slick from script.js) ---------- */
+type SwiperT = import('swiper').Swiper;
 
-function loadScript(src: string): Promise<void> {
-  let p = scriptPromises.get(src);
-  if (!p) {
-    p = new Promise<void>((resolve, reject) => {
-      const s = document.createElement('script');
-      s.src = src;
-      s.async = false;
-      s.onload = () => resolve();
-      s.onerror = () => {
-        scriptPromises.delete(src);
-        reject(new Error(`Failed to load ${src}`));
-      };
-      document.body.appendChild(s);
+// Turn an already rendered slider (".agency-slider > .agency-slider__item") into Swiper markup in place,
+// the way slick did, so the page markup stays the same. Returns a function that restores it.
+function prepareSwiper(root: HTMLElement, cloneTimes = 0): () => void {
+  const items = Array.from(root.children) as HTMLElement[];
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+  items.forEach((item) => {
+    item.classList.add('swiper-slide');
+    wrapper.appendChild(item);
+  });
+  // Swiper's loop needs more slides than fit on screen: add copies (like slick's clones).
+  const clones: HTMLElement[] = [];
+  for (let n = 0; n < cloneTimes; n++) {
+    items.forEach((item) => {
+      const c = item.cloneNode(true) as HTMLElement;
+      c.setAttribute('aria-hidden', 'true');
+      c.dataset.clone = '';
+      c.querySelectorAll('a').forEach((a) => a.setAttribute('tabindex', '-1'));
+      clones.push(c);
+      wrapper.appendChild(c);
     });
-    scriptPromises.set(src, p);
   }
-  return p;
+  root.classList.add('swiper');
+  root.appendChild(wrapper);
+  return () => {
+    clones.forEach((c) => c.remove());
+    items.forEach((item) => {
+      item.classList.remove('swiper-slide', 'swiper-slide-active', 'swiper-slide-next', 'swiper-slide-prev');
+      item.removeAttribute('style');
+      root.insertBefore(item, wrapper);
+    });
+    wrapper.remove();
+    root.classList.remove('swiper');
+  };
 }
 
 function initSliders($$: Q, cleanups: Array<() => void>) {
-  const selectors = ['.agency-slider', '.serm-platform-slider', '.home-marquee-marquee', '.home-assist-slider', '.slider-journal', '.slider-journal-nav'];
-  if (!selectors.some((s) => document.querySelector(s))) return;
+  const agency = document.querySelector<HTMLElement>('.agency-slider');
+  const assist = document.querySelector<HTMLElement>('.home-assist-slider');
+  const journal = document.querySelector<HTMLElement>('.slider-journal');
+  const journalNav = document.querySelector<HTMLElement>('.slider-journal-nav');
+  if (!agency && !assist && !journal) return;
+
   let cancelled = false;
-  let destroy: (() => void) | undefined;
+  const instances: Array<{ swiper: SwiperT; restore: () => void }> = [];
+  const destroyAll = () => {
+    instances.splice(0).forEach(({ swiper, restore }) => {
+      swiper.destroy(true, true);
+      restore();
+    });
+  };
   cleanups.push(() => {
     cancelled = true;
-    destroy?.();
+    destroyAll();
   });
 
   (async () => {
-    // Same jQuery 3.7.1 + slick 1.8 files the WordPress site used (public/vendor), loaded once as
-    // classic scripts so slick registers itself on the one global jQuery.
-    await loadScript('/vendor/jquery.min.js');
-    await loadScript('/vendor/slick.min.js');
+    const [{ default: Swiper }, { Navigation }] = await Promise.all([import('swiper'), import('swiper/modules')]);
     if (cancelled) return;
-    type Jq = { length: number; slick: (opts?: object | string) => void; hasClass: (c: string) => boolean };
-    const $ = (window as unknown as { jQuery: (sel: string) => Jq }).jQuery;
-    const inited: string[] = [];
-    const init = (sel: string, opts: object) => {
-      const el = $(sel);
-      if (!el.length || el.hasClass('slick-initialized')) return;
-      el.slick(opts);
-      inited.push(sel);
+    const make = (el: HTMLElement, opts: ConstructorParameters<typeof Swiper>[1], cloneTimes = 0) => {
+      const restore = prepareSwiper(el, cloneTimes);
+      const swiper = new Swiper(el, opts);
+      instances.push({ swiper, restore });
+      return swiper;
     };
 
-    init('.agency-slider', {
-      arrows: true, appendArrows: '.agency-slider__buttons', prevArrow: '.agency-slider__btn-prev', nextArrow: '.agency-slider__btn-next',
-      dots: false, speed: 800, autoplay: false, autoplaySpeed: 1200, variableWidth: true, centerMode: false,
-    });
-    init('.serm-platform-slider', {
-      dots: false, arrows: false, infinite: true, slidesToShow: 1, slidesToScroll: 1, variableWidth: true,
-      autoplay: true, autoplaySpeed: 0, speed: 18000, cssEase: 'linear',
-    });
-    init('.home-marquee-marquee', {
-      dots: false, arrows: false, infinite: true, slidesToShow: 1, slidesToScroll: 1,
-      autoplay: true, autoplaySpeed: 0, speed: 18000, cssEase: 'linear', variableWidth: true,
-    });
-    if (window.innerWidth <= 992) {
-      init('.home-assist-slider', {
-        slidesToShow: 1, slidesToScroll: 1, dots: false, arrows: true,
-        appendArrows: '.home-assist-slider__buttons', prevArrow: '.home-assist-slider__btn-prev', nextArrow: '.home-assist-slider__btn-next',
+    // Agency: slides of different widths, arrows, endless.
+    if (agency) {
+      make(
+        agency,
+        {
+          modules: [Navigation],
+          slidesPerView: 'auto',
+          speed: 800,
+          loop: true,
+          navigation: { prevEl: '.agency-slider__btn-prev', nextEl: '.agency-slider__btn-next' },
+        },
+        2,
+      );
+    }
+
+    // "How do we assist": a slider only on screens <= 992px (a grid on desktop), as before.
+    if (assist && window.innerWidth <= 992) {
+      make(assist, {
+        modules: [Navigation],
+        slidesPerView: 1,
+        loop: true,
+        navigation: { prevEl: '.home-assist-slider__btn-prev', nextEl: '.home-assist-slider__btn-next' },
       });
     }
-    init('.slider-journal', {
-      asNavFor: '.slider-journal-nav', arrows: true, appendArrows: '.slider-journal__buttons',
-      prevArrow: '.slider-journal__btn-prev', nextArrow: '.slider-journal__btn-next', dots: false, variableWidth: true,
-      responsive: [{ breakpoint: 992, settings: { centerMode: false, variableWidth: false } }],
-    });
-    init('.slider-journal-nav', {
-      slidesToShow: 3, slidesToScroll: 1, asNavFor: '.slider-journal', focusOnSelect: true, dots: false,
-      appendArrows: '.slider-journal__buttons', prevArrow: '.slider-journal__btn-prev', nextArrow: '.slider-journal__btn-next', variableWidth: true,
-    });
 
-    destroy = () => inited.forEach((sel) => $(sel).length && $(sel).hasClass('slick-initialized') && $(sel).slick('unslick'));
+    // Journal on the home page / FAQ: main slider + thumbnails strip, kept in sync both ways.
+    if (journal) {
+      const count = journal.children.length;
+      const main = make(journal, { slidesPerView: 'auto', speed: 300, loop: true }, 2);
+      if (journalNav) {
+        const nav = make(journalNav, { slidesPerView: 'auto', speed: 300, loop: true, slideToClickedSlide: true }, 2);
+        let syncing = false;
+        const sync = (to: SwiperT, index: number) => {
+          if (syncing) return;
+          syncing = true;
+          to.slideToLoop(index % count);
+          syncing = false;
+        };
+        main.on('realIndexChange', () => sync(nav, main.realIndex));
+        nav.on('realIndexChange', () => sync(main, nav.realIndex));
+      }
+    }
   })();
   void $$;
 }

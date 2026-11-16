@@ -2,7 +2,6 @@
 // so the cascade (and therefore the look) stays 1:1.
 @use 'wordpress';
 @use 'theme/cf7-vendor';
-@use 'theme/slick-vendor';
 @use 'theme/null';
 @use 'theme/contacts';
 @use 'theme/agency';
@@ -22,4 +21,5 @@
 @use 'theme/faq';
 @use 'theme/cases';
 @use 'theme/header';
+@use 'sliders';
 @use 'preloader';

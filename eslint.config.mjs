@@ -12,8 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Third-party minified scripts copied from the old site.
-    "public/vendor/**",
   ]),
 ]);
 

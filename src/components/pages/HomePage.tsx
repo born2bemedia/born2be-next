@@ -192,15 +192,27 @@ export default function HomePage() {
           <div className="home-marquee__body">
             {" "}
             <div className="home-marquee-marquee">
-              {" "}
-              <div className="home-marquee-marquee__item">
-                <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
+              <div className="marquee-track">
+                {" "}
+                <div className="home-marquee-marquee__item">
+                  <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
+                </div>
+                {" "}
+                <div className="home-marquee-marquee__item">
+                  <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
+                </div>
+                {" "}
+                {/* copies for a seamless loop */}
+                {" "}
+                <div className="home-marquee-marquee__item" aria-hidden="true">
+                  <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
+                </div>
+                {" "}
+                <div className="home-marquee-marquee__item" aria-hidden="true">
+                  <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
+                </div>
+                {" "}
               </div>
-              {" "}
-              <div className="home-marquee-marquee__item">
-                <img src="/wp-content/uploads/2023/12/home-marquee-01.svg" alt="image" />
-              </div>
-              {" "}
             </div>
             {" "}
           </div>
